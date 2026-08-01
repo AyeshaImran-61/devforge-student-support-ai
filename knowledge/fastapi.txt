@@ -1,0 +1,17 @@
+FastAPI Guide
+
+FastAPI is used to build REST APIs.
+
+Main endpoints
+
+/
+
+ /health
+
+ /docs
+
+ /chat
+
+Use uvicorn to run
+
+uvicorn main:app --reload

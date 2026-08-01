@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DEVFORGE Student Support AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Highlight.js CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <!-- Highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <div>
+
+                <h2>DEVFORGE AI</h2>
+
+                <span>Student Support</span>
+
+            </div>
+
+        </div>
+
+        <button id="newChat">
+
+            <i class="fa-solid fa-plus"></i>
+
+            New Chat
+
+        </button>
+
+        <div class="sidebar-bottom">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-brain"></i>
+
+                LangGraph Agent
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-book"></i>
+
+                RAG Knowledge Base
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-cloud"></i>
+
+                Ollama Cloud
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <header>
+
+            <div>
+
+                <h1>DEVFORGE Student Support AI</h1>
+
+                <p>Python • FastAPI • LangGraph • LangChain • GitHub • Render</p>
+
+            </div>
+
+            <div class="status">
+
+                <span class="dot"></span>
+
+                Online
+
+            </div>
+
+        </header>
+
+        <!-- Messages -->
+
+        <section id="chat">
+
+            <div class="welcome">
+
+                <div class="ai-avatar">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                </div>
+
+                <div class="welcome-text">
+
+                    <h2>Hello 👋</h2>
+
+                    <p>
+
+                        I'm your DEVFORGE Student Support AI.
+
+                        Ask me anything about
+
+                        Python,
+
+                        FastAPI,
+
+                        LangGraph,
+
+                        GitHub,
+
+                        Render,
+
+                        AI Engineering,
+
+                        or your internship.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Input -->
+
+        <footer>
+
+            <div class="input-box">
+
+                <textarea
+
+                    id="message"
+
+                    rows="1"
+
+                    placeholder="Ask anything..."
+
+                ></textarea>
+
+                <button id="sendBtn">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </div>
+
+            <small>
+
+                AI responses may contain mistakes. Verify important information.
+
+            </small>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- Markdown Parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<!-- Your Script -->
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>

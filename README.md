@@ -1,51 +1,112 @@
-# DEVFORGE Student Support AI Agent
+# 🎓 DEVFORGE Student Support AI Agent
 
-An AI-powered student support assistant built using FastAPI, LangGraph, LangChain, and Ollama Cloud.
+A professional AI-powered student support assistant built using **FastAPI**, **LangGraph**, and **Ollama Cloud** to help DEVFORGE internship students with AI Engineering and technical learning.
 
 ---
 
-## Features
+# Features
 
 - AI-powered student support
 - LangGraph workflow
 - Question classification
-- Safe response for unrelated questions
+- Safe response system
+- Conversation memory
+- FAQ node
+- Response formatting
+- Basic Retrieval-Augmented Generation (RAG)
 - Ollama Cloud integration
 - FastAPI REST API
-- Interactive Swagger documentation
+- Professional web interface
+- Swagger API documentation
 
 ---
 
-## Tech Stack
+# Tech Stack
 
-- Python
-- FastAPI
-- LangChain
-- LangGraph
-- Ollama Cloud
-- OpenAI SDK (Ollama-compatible API)
-- Uvicorn
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend |
+| FastAPI | REST API |
+| LangGraph | AI Workflow |
+| LangChain | AI Orchestration |
+| Ollama Cloud | Large Language Model |
+| HTML/CSS/JavaScript | Frontend |
+| GitHub | Version Control |
+| Render | Deployment |
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
 devforge-student-support-ai/
 │
-├── main.py
+├── knowledge/
+│   ├── faq.txt
+│   ├── fastapi.txt
+│   ├── github.txt
+│   └── render.txt
+│
+├── screenshots/
+│   ├── dashboard.png
+│   ├── response.png
+│   └── response2.png
+│
+├── static/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
 ├── agent.py
-├── requirements.txt
+├── rag.py
+├── faq.py
+├── main.py
 ├── render.yaml
-├── README.md
+├── requirements.txt
 ├── .env.example
-├── .gitignore
-└── .venv/
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## Installation
+# LangGraph Workflow
+
+```
+                User Question
+                      │
+                      ▼
+           Question Classification
+              │               │
+              │               │
+              ▼               ▼
+        AI Support Node   Safe Response
+              │
+              ▼
+        Response Formatter
+              │
+              ▼
+         Final AI Response
+```
+
+---
+
+# API Endpoints
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | / | Welcome Message |
+| GET | /health | Health Check |
+| POST | /chat | AI Chat Endpoint |
+| GET | /docs | Swagger Documentation |
+
+---
+
+## API Documentation
+
+![Swagger](screenshots/swagger.png)
+
+# Installation
 
 Clone the repository
 
@@ -59,13 +120,13 @@ Move into the project
 cd devforge-student-support-ai
 ```
 
-Create a virtual environment
+Create virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it
+Activate environment
 
 Windows
 
@@ -79,22 +140,14 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
----
-
-## Environment Variables
-
-Create a `.env` file.
-
-Example:
+Create a `.env`
 
 ```env
 OLLAMAAPIKEY=YOUR_API_KEY
 OLLAMA_MODEL=gpt-oss:20b-cloud
 ```
 
----
-
-## Run the Project
+Run the application
 
 ```bash
 uvicorn main:app --reload
@@ -102,65 +155,86 @@ uvicorn main:app --reload
 
 ---
 
-## API Endpoints
+# Screenshots
 
-### GET /
+## Dashboard
 
-Returns a welcome message.
-
-### GET /health
-
-Returns application health.
-
-### POST /chat
-
-Accepts a student question and returns the AI response.
-
-### GET /docs
-
-Swagger API documentation.
+![Dashboard](screenshots/dashboard.png)
 
 ---
 
-## LangGraph Workflow
+## Related Question
 
-```
-User Question
-      │
-      ▼
-Question Classification
-      │
-      ├──────────────┐
-      ▼              ▼
-AI Support      Safe Response
-      │              │
-      └──────┬───────┘
-             ▼
-        Final Response
+![Related Question](screenshots/response.png)
+
+---
+
+## Unrelated Question
+
+![Unrelated Question](screenshots/response2.png)
+
+---
+
+# Example Request
+
+```json
+POST /chat
+
+{
+  "message": "How do I deploy my project on Render?"
+}
 ```
 
 ---
 
-## Security
+# Example Response
 
-- API keys stored in environment variables
+```json
+{
+    "response": "Follow these steps to deploy your FastAPI project on Render..."
+}
+```
+
+---
+
+# Security
+
+- API key stored using environment variables
 - `.env` excluded from GitHub
 - `.env.example` included for setup
+- No sensitive credentials committed
 
 ---
 
-## Deployment
+# Bonus Features
 
-Backend deployment target:
+- Conversation Memory
+- FAQ Node
+- Response Formatter
+- Basic RAG
+- Professional Frontend
+- Error Handling
+- Ollama Cloud Integration
 
-- Render Web Service
+---
 
-Environment Variables:
+# Future Improvements
 
-- OLLAMAAPIKEY
-- OLLAMA_MODEL
+- Vector Database
+- Semantic Search
+- PDF Knowledge Base
+- Authentication
+- Chat History Database
+- Streaming Responses
+- Voice Support
 
-Start Command
+---
+
+# Deployment
+
+Backend deployed on Render.
+
+Render Start Command
 
 ```bash
 uvicorn main:app --host 0.0.0.0 --port $PORT
@@ -168,12 +242,16 @@ uvicorn main:app --host 0.0.0.0 --port $PORT
 
 ---
 
-## Author
+# Author
 
-Ayesha Imran
-
-University of Faisalabad
+**Ayesha Imran**
 
 Bachelor of Artificial Intelligence
 
-DEVFORGE Internship Project
+University of Faisalabad
+
+---
+
+# License
+
+This project is developed for the **DEVFORGE Internship Program** for educational purposes.

@@ -1,0 +1,20 @@
+Render Deployment
+
+Push code to GitHub.
+
+Create a new Web Service.
+
+Connect your GitHub repository.
+
+Use Python environment.
+
+Start command
+
+uvicorn main:app --host 0.0.0.0 --port $PORT
+
+Add environment variables
+
+OLLAMAAPIKEY
+OLLAMA_MODEL
+
+Deploy.

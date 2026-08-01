@@ -3,12 +3,16 @@ from pydantic import BaseModel
 
 from agent import run_agent
 
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 app = FastAPI(
     title="DEVFORGE Student Support AI Agent",
     description="AI Agent for DEVFORGE Internship Students",
     version="1.0.0"
 )
 
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 class ChatRequest(BaseModel):
     message: str
@@ -16,10 +20,7 @@ class ChatRequest(BaseModel):
 
 @app.get("/")
 def home():
-    return {
-        "message": "Welcome to DEVFORGE Student Support AI Agent!",
-        "docs": "/docs"
-    }
+    return FileResponse("static/index.html")
 
 
 @app.get("/health")

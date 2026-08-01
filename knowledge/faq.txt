@@ -1,0 +1,16 @@
+DEVFORGE Internship FAQ
+
+Q: What is DEVFORGE?
+A: DEVFORGE is an internship program focused on AI Engineering and Full Stack Development.
+
+Q: What technologies are used?
+A: Python, FastAPI, LangChain, LangGraph, GitHub, Render and Ollama Cloud.
+
+Q: What is the final submission?
+A: GitHub Repository and Render Deployment Link.
+
+Q: Is Render free?
+A: Yes, Render provides a free web service for deployment.
+
+Q: Should I upload my .env file?
+A: Never upload your .env file.

@@ -1,0 +1,20 @@
+GitHub Guide
+
+Initialize repository.
+
+Commit code.
+
+Push to GitHub.
+
+Never upload .env.
+
+Use .gitignore.
+
+README should explain the project.
+
+github
+push
+repository
+commit
+clone
+branch
